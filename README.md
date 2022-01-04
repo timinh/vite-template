@@ -10,13 +10,18 @@ A simple vite template including :
  (.env file is commited you should override it with .en.local with you own value. See [Env variables and modes](https://vitejs.dev/guide/env-and-mode.html))
  - APIs auto importing using [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
 
- 
- ## Usage
 
+ ### Installation
+
+ Open a terminal window and run the command : 
+
+ ```
+ npm install
+ ```
  
  ### Developement
 
- Open a terminal and run the command
+ To start the dev server, run :
 
  ```
  npm run dev 
@@ -26,7 +31,7 @@ then open in your browser : http://localhost:3000/
 
 ### Build
 
-To build the app, run 
+To build the app, run :
 
 ```
 npm run build
@@ -34,12 +39,11 @@ npm run build
 distribution files will be generated in the 'dist' folder.
 You can deploy the 'dist' folder on you server.
 
-Use the preview command
+Use the preview command to preview the site from the 'dist' folder :
 
 ```
 npm run preview
 ```
-to preview the site from the 'dist' folder
 
 ### Configuration
 
@@ -48,4 +52,4 @@ Create an .env.local file in the root directory of your project or duplicate pro
 VITE_API_KEY=my_api_key
 ```
 
-process.env.VITE_API_KEY is now available in your app.
+The *process.env.VITE_API_KEY* var is now available in your app.
