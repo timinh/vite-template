@@ -38,6 +38,7 @@ export default defineConfig( ({mode}) => {
         defaultLayout: "default",
       }),
       Components({
+        dirs: ['src/components'],
         extensions: ['vue', 'md'],
         include: [/\.vue$/, /\.md$/],
       }),
