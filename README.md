@@ -40,3 +40,12 @@ Use the preview command
 npm run preview
 ```
 to preview the site from the 'dist' folder
+
+### Configuration
+
+Create an .env.local file in the root directory of your project or duplicate provided .env file and add you environment specific variables in the form VITE_NAME=value. For example : 
+```
+VITE_API_KEY=my_api_key
+```
+
+process.env.VITE_API_KEY is now available in your app.
