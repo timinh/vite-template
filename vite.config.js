@@ -28,8 +28,11 @@ export default defineConfig( ({mode}) => {
         include: [/\.vue$/, /\.md$/]
       }),
       Pages({
-        dirs: "src/pages"
-      }),
+      pagesDir: [
+        "src/pages",
+      ],
+      extensions: ['vue', 'md']
+    }),
       Layouts({
         layoutsDir: "src/layouts",
         defaultLayout: "default",
