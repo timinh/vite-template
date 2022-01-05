@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import { createHead } from '@vueuse/head'
 import {setupLayouts} from 'virtual:generated-layouts'
 import pages from '~pages'
 import App from './App.vue'
@@ -10,4 +11,5 @@ const router = createRouter({
     history: createWebHistory(),
     routes
 })
-createApp(App).use(router).mount('#app')
+const head = createHead()
+createApp(App).use(head).use(router).mount('#app')

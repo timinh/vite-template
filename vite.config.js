@@ -42,11 +42,14 @@ export default defineConfig( ({mode}) => {
         extensions: ['vue', 'md'],
         include: [/\.vue$/, /\.md$/],
       }),
-      Markdown(),
+      Markdown({
+        headEnabled: true,
+      }),
       AutoImport({
         imports: [
           'vue',
           'vue-router',
+          '@vueuse/head',
         ],
       }),
     ]
