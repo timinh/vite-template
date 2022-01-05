@@ -47,9 +47,28 @@ npm run preview
 
 ### Configuration
 
-Create an .env.local file in the root directory of your project or duplicate provided .env file and add you environment specific variables in the form VITE_NAME=value. For example : 
+Create an .env.local file in the root directory of your project or duplicate provided .env file and add you environment specific variables in the form VITE_NAME=value. 
+
+Site title and description : 
+
+```
+VITE_SITE_TITLE=My awesome site
+VITE_SITE_DESCRIPTION=Site description
+```
+These variables are used for the title and description of the site (see App.vue)
+
+you can add you own vars, for example : 
+
 ```
 VITE_API_KEY=my_api_key
 ```
 
+
 The *process.env.VITE_API_KEY* var is now available in your app.
+
+### Pages
+Simply add .vue files or .md files in the pages 'folder'
+
+You can use meta in both .vue and .md files.
+For .vue files see [vite-plugin-pages documentation](https://github.com/hannoeru/vite-plugin-pages)
+For .md files, use frontmatter syntax, see [vite-plugin-md documentation](https://github.com/antfu/vite-plugin-md)
