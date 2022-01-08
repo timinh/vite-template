@@ -11,10 +11,21 @@ A simple vite template including :
  - APIs auto importing using [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
  - Meta tags and .md files using [@vueuse/head](https://github.com/vueuse/head)
 
+ ### Create a new project from this template
+
+ Run the following command in your terminal window :
+
+ ```
+npx degit https://github.com/timinh/vite-template.git myProjectFolder
+ ```
+ then
+ ```
+ cd myProjectFolder
+ ```
 
  ### Installation
 
- Open a terminal window and run the command : 
+ Run the command : 
 
  ```
  npm install
