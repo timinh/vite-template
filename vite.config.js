@@ -44,6 +44,11 @@ export default defineConfig( ({mode}) => {
       }),
       Markdown({
         headEnabled: true,
+        markdownItOptions: {
+          html: true,
+          linkify: true,
+          typographer: true,
+        },
       }),
       AutoImport({
         imports: [

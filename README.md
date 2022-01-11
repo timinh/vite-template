@@ -85,3 +85,8 @@ Simply add .vue files or .md files in the `pages` folder
 You can use meta in both .vue and .md files.
 For .vue files see [vite-plugin-pages documentation](https://github.com/hannoeru/vite-plugin-pages)
 For .md files, use frontmatter syntax, see [vite-plugin-md documentation](https://github.com/antfu/vite-plugin-md)
+
+### Todo
+
+- [ ] Add transitions between pages  
+- [ ] Add middlewares (for authentication, logs, etc.)  
