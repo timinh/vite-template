@@ -4,6 +4,7 @@ import { createHead } from '@vueuse/head'
 import {setupLayouts} from 'virtual:generated-layouts'
 import pages from '~pages'
 import App from './App.vue'
+import './assets/transitions.css'
 
 const routes = setupLayouts(pages)
 

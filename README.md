@@ -86,7 +86,29 @@ You can use meta in both .vue and .md files.
 For .vue files see [vite-plugin-pages documentation](https://github.com/hannoeru/vite-plugin-pages)
 For .md files, use frontmatter syntax, see [vite-plugin-md documentation](https://github.com/antfu/vite-plugin-md)
 
+### Layouts
+Add you layouts in the `layouts` folder
+
+define a layout property in you page meta
+
+```
+<route lang="yaml">
+meta:
+    layout: MyLayout
+<route>
+```
+
+### Transitions
+Update `src/assets/transitions.css` with you own transition css, the use the transition meta in your page.
+
+```
+<route lang="yaml">
+meta:
+    transition: slide
+</route>
+```
+If you don't set the transition meta property, 'fade' will be used.
+
 ### Todo
 
-- [ ] Add transitions between pages  
 - [ ] Add middlewares (for authentication, logs, etc.)  
