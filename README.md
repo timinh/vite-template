@@ -99,7 +99,7 @@ meta:
 ```
 
 ### Transitions
-Update `src/assets/transitions.css` with you own transition css, the use the transition meta in your page.
+Update `src/assets/transitions.css` with you own transition css, then use the transition meta in your page.
 
 ```
 <route lang="yaml">
