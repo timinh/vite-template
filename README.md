@@ -10,6 +10,7 @@ A simple vite template including :
  (.env file is commited you should override it with .en.local with you own value. See [Env variables and modes](https://vitejs.dev/guide/env-and-mode.html))
  - APIs auto importing using [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
  - Meta tags and .md files using [@vueuse/head](https://github.com/vueuse/head)
+ - Pinia store library [pinia](https://pinia.vuejs.org/)
 
  ### Create a new project from this template
 
@@ -108,6 +109,10 @@ meta:
 </route>
 ```
 If you don't set the transition meta property, 'fade' will be used.
+
+### Store
+Add you own store file in `src/store` and import it in your page.
+See [Pinia documentation](https://pinia.vuejs.org/) for usage documentation.
 
 ### Todo
 

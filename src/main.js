@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import { createPinia } from 'pinia'
 import { createHead } from '@vueuse/head'
 import {setupLayouts} from 'virtual:generated-layouts'
 import pages from '~pages'
@@ -13,4 +14,4 @@ const router = createRouter({
     routes
 })
 const head = createHead()
-createApp(App).use(head).use(router).mount('#app')
+createApp(App).use(head).use(router).use(createPinia()).mount('#app')
