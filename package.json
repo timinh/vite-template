@@ -8,12 +8,17 @@
   },
   "dependencies": {
     "@vueuse/head": "^0.7.4",
+    "axios": "^1.2.3",
+    "bootstrap": "^5.2.3",
     "pinia": "^2.0.11",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",
+    "node-sass": "^8.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
     "unplugin-auto-import": "^0.5.10",
     "unplugin-vue-components": "^0.17.11",
     "vite": "^2.7.2",

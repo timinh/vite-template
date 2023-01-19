@@ -1,21 +1,37 @@
 <template>
     <div>
-        <h1>Home page</h1>
-        <h2>VITE_API_KEY : {{ api_key }}</h2>
-        <p>defined in .env (should be overrided in .env.local)</p>
-        <h2>Example store contains counter = {{ store.counter }}</h2>
-        <button @click="store.counter++">Increment counter</button>&nbsp;
-        <button @click="store.counter--">Decrement counter</button>
+        <h1>Demo api REST</h1>
+        <div class="row">
+            <input type="text" v-model="searchValue" @keyup="search" placeholder="Chercher un personnage" />
+        </div>
+        <div class="row">
+            <character-card class="m-1" v-for="character in store.characters" :character="character">
+                <button v-if="!store.inBookmarks(character)" @click="store.addBookmark(character)"
+                    class="btn btn-secondary">Ajouter à mes favoris</button>
+                <router-link :to="`/character/${character.id}`" class="btn btn-secondary mt-2">Voir</router-link>
+            </character-card>
+        </div>
+        <div class="text-center">
+            <loader type="primary" v-if="store.loading" />
+            <button class="btn btn-secondary" @click="store.loadMore()">Voir plus</button>
+        </div>
     </div>
 </template>
 <route lang="yaml">
-name: home
+name: accueil
 meta:
-    requiresAuth: false
+    nav: true
 </route>
 <script setup>
-import { useCounter } from '../store/useCounter'
-
-const api_key = process.env.VITE_API_KEY
-const store = useCounter()
+    import {useCharacterStore} from '../store/characters'
+    const searchValue = ref('')
+    const store = useCharacterStore()
+    onMounted( () => store.loadCharacters())
+    const search = () => {
+        if(searchValue.value.length === 0 || searchValue.value.length >2 ){
+            store.loadCharacters({
+                name: searchValue.value
+            })
+        }
+    }
 </script>
