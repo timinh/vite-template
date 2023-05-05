@@ -1,7 +1,7 @@
 <template>
 	<q-page-container>
     <div class="q-pa-md">
-        <div class="text-h2">Demo api Graphql</div>
+        <div class="text-h2">Demo api REST</div>
   		<div class="q-pa-md row items-start q-gutter-xs">
       		<q-input square filled v-model="query" @update:model-value="search()" label="Chercher un personnage">
 				<template v-slot:append>
@@ -23,7 +23,7 @@
 	</q-page-container>
 </template>
 <route lang="yaml">
-name: 'api_graphql'
+name: 'api_rest'
 meta:
     nav: true
 </route>
@@ -34,30 +34,10 @@ import { useApi } from '../composables/use-api'
 import { useCharacterStore } from '../store/characters'
 const store = useCharacterStore()
 
-const charactersQuery = `
-query Characters($name:String!) {
-	characters(filter: {name: $name}){
-		results{
-			id
-			name
-			image
-			species
-			episode{
-				name
-			}
-		}
-	}
-}
-`
 const { query, result: characters, loading, error, callApi: search} = useApi(async(query)=> {
-	const res = await Api.post('https://rickandmortyapi.com/graphql',
-	{
-		query: charactersQuery,
-		variables: {
-			name: query
-		}
-	})
-	return res.data.data.characters.results
+	const res = await Api.get(`https://rickandmortyapi.com/api/character?name=${query}`)
+	return res.data.results
 })
+
 onMounted(() => search())
 </script>
