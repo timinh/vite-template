@@ -29,7 +29,7 @@ npx degit https://github.com/timinh/vite-template.git myProjectFolder
  Run the command : 
 
  ```
- npm install
+ yarn
  ```
  
  ### Developement
@@ -37,9 +37,9 @@ npx degit https://github.com/timinh/vite-template.git myProjectFolder
  To start the dev server, run :
 
  ```
- npm run dev 
+ yarn dev 
  ```
-then open in your browser : http://localhost:3000/
+then open in your browser : http://localhost:5173/
 
 
 ### Build
@@ -47,7 +47,7 @@ then open in your browser : http://localhost:3000/
 To build the app, run :
 
 ```
-npm run build
+yarn build
 ```
 distribution files will be generated in the `dist` folder.
 You can deploy the `dist` folder on you server.
@@ -55,7 +55,7 @@ You can deploy the `dist` folder on you server.
 Use the preview command to preview the site from the `dist` folder :
 
 ```
-npm run preview
+yarn preview
 ```
 
 ### Configuration
